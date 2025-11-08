@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — Taufique Blog</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="admin">
+  <div class="nav container">
+    <div class="logo">TaufiqueAdmin</div>
+    <div style="flex:1"></div>
+    <a href="index.html">Home</a>
+  </div>
+
+  <div class="container" style="margin-top:90px;max-width:900px">
+    <div class="card">
+      <h2 style="color:var(--accent1)">Quick Admin (local only)</h2>
+      <form id="admin-form">
+        <div style="display:flex;gap:10px;flex-direction:column">
+          <input id="a-title" placeholder="Title" required style="padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.03);color:#eaf8ff"/>
+          <input id="a-img" placeholder="Image URL (optional)" style="padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.03);color:#eaf8ff"/>
+          <input id="a-category" placeholder="Category (e.g. Design)" style="padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.03);color:#eaf8ff"/>
+          <input id="a-tags" placeholder="Tags (comma separated)" style="padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.03);color:#eaf8ff"/>
+          <input id="a-excerpt" placeholder="Short excerpt" style="padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.03);color:#eaf8ff"/>
+          <textarea id="a-content" placeholder="Full HTML content" rows="8" style="padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.03);color:#eaf8ff"></textarea>
+          <div style="display:flex;gap:12px">
+            <button class="icon-btn" type="submit">Add Post</button>
+            <button id="clear-storage" type="button" class="btn-ghost">Reset Posts</button>
+          </div>
+        </div>
+      </form>
+      <p class="small" style="margin-top:12px;color:var(--muted)">Posts are saved in your browser's localStorage — use admin only on your device. To make posts permanent, paste them into script.js or set up a backend later.</p>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+<script>initAdmin()</script>
+</body>
+</html>
